@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+  int qntd,i=0,j=0,conferir=1,x=0,a=0,b=0;//a e b são variaveis para contar o valor dos nome1 e nome2. Conferir serve para mudar qual nome será somado.
+  char nome1[500],nome2[500],verdadeiro[500];
+  scanf("%d",&qntd);
+  getchar();
+  while(qntd>0){
+      gets(nome1);
+      gets(nome2);
+      while(i<(strlen(nome1))+((strlen(nome2)))){
+            if(i==0){
+                verdadeiro[j]=nome1[a];
+                x++;j++;a++;
+            }
+            else{
+                if((conferir==1)&&(x!=2)){ //esse if serve para colocar no nome verdadeiro as posiçoes certas.
+                    verdadeiro[j] = nome1[a];
+                    j++;x++;a++;
+                    if(x==2){
+                        x=0;
+                        conferir=0;
+                    }
+                }
+                if((conferir==0)&&(x!=2)){//esse if serve para colocar no nome verdadeiro as posiçoes certas.
+                    verdadeiro[j]=nome2[b];
+                    j++;x++;b++;
+                    if(x==2){
+                        x=0;
+                        conferir=1;
+                    }
+                }
+            }
+            i++;
+      }
+      verdadeiro[j]='\0';
+      j=i=x=a=b=0;
+      conferir=1;
+      printf("%s\n",verdadeiro);
+      qntd--;
+      verdadeiro[0]='\0';
+  }
+ }
