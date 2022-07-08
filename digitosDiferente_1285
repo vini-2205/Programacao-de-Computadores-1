@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+    int i=0,j=1,k=0,num1,num2,qntd,seq[5000],valores=0,verdadeiro=0;
+    char numeros[5001],primeiro;
+    while((scanf("%d %d",&num1,&num2))!= EOF){
+        qntd=(num2-num1)+1;
+        for(i=0;i<qntd;i++){
+            seq[i]=num1+i;
+        }
+        if(num1!=num2){
+            for(i=0;i<qntd;i++){
+                sprintf(numeros,"%d",seq[i]);
+                for(k=0;k<strlen(numeros);k++){
+                    for(j=0;j<strlen(numeros);j++){
+                        primeiro=numeros[k];
+                        if((primeiro==numeros[j])&&(k!=j)){
+                            verdadeiro=1;
+                        }
+                    }
+                }
+                if(verdadeiro==0){
+                    valores++;
+                }
+                numeros[0]='\0';
+                verdadeiro=0;
+            }
+            }
+        else if(num1==num2){
+            sprintf(numeros,"%d",num1);
+            for(k=0;k<strlen(numeros);k++){
+                for(i=0;i<strlen(numeros);i++){
+                    primeiro=numeros[k];
+                    if((primeiro==numeros[j])&&(k!=j)){
+                        verdadeiro=1;
+                    }
+                }
+            }
+            if(verdadeiro==0){
+                valores=1;
+            }
+        }
+        printf("%d\n",valores);
+        verdadeiro=0,j=1,valores=0;
+        numeros[0]='\0';
+    }
+    return 0;
+}
