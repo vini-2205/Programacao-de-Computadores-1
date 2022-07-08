@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void primo(int X,int y){
+   while(y<X){
+        if(X%y==0){
+         printf("%d nao eh primo\n",X);
+         return;
+        }
+        y++;
+    }
+    printf("%d eh primo\n",X);
+    }
+
+ int main(){
+  int N, X,contador = 0, y=2;
+  scanf("%d",&N);
+  while(contador<N){
+    scanf("%d",&X);
+    primo(X,y);
+    y = 2;
+    contador++;
+  }
+ return 0;
+ }
