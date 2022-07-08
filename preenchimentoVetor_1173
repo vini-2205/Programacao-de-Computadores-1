@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(){
+ int N[10],i = 0,valor;
+ scanf("%d",&valor);
+ while(i<10){
+   N[i] = valor;
+   printf("N[%d] = %d\n",i,N[i]);
+   i++;
+   valor = valor*2;
+ }
+ return 0;
+}
