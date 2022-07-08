@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+  int N, contador = 1,e;
+  scanf("%d",&N);
+  while(contador<=N){
+    contador++;
+    if(contador % 2 == 0){
+        e = pow(contador,2);
+        printf("%d^2 = %d\n",contador, e);
+    }
+    }
+    return 0;
+}
