@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int soma(int x, int y){
+ int contador=0,i,n=1,s=0;
+ int max, min;
+ if(x>y){
+    min = y;
+    max = x;
+  }
+  else{
+    min = x;
+    max = y;
+  }
+  while(++min<max){
+        if(min%2!=0){
+           s = s+min;
+            }
+}
+  return s;
+}
+
+int main(){
+  int x,y,z;
+  scanf("%d",&x);
+  scanf("%d",&y);
+  z = soma(x,y);
+  printf("%d\n",z);
+    return 0;
+}
