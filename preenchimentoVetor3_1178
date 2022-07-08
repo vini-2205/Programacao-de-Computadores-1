@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(){
+ int contador=0;
+ double N[100],X;
+ scanf("%lf",&X);
+ while(contador<100){
+    N[contador] = X;
+    printf("N[%d] = %.4lf\n",contador,X);
+    contador++;
+    X = X/2;
+ }
+ return 0;
+}
