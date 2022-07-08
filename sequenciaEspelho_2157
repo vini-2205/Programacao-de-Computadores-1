@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(){
+
+    int casos, i, j, aux_inicial, numero1, numero2, x, y;
+
+    scanf("%i", &casos);
+
+    for(i = 0; i < casos; i++){
+        scanf("%i %i", &numero1, &numero2);
+        aux_inicial = numero1;
+
+        for(aux_inicial = numero1; aux_inicial <= numero2; aux_inicial++){
+            printf("%i", aux_inicial);
+        }
+    for(j = numero2; j >= numero1; j--){
+        x = j;
+        while(x){
+            y = x%10;
+            printf("%i", y);
+            x = x/10;
+        }
+    }
+    printf("\n");
+    }
+    return 0;
+
+}
