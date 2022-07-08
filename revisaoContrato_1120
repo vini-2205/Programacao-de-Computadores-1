@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+int main(){
+    int i=1,j=0,l=0,soma=0,zeros=0,verificar=0;
+    char num, numero[100000], novovet[100000],outrovet[100000];
+    while(i == 1){
+        scanf("%c", &num);
+        getchar();
+        gets(numero);
+        if(num=='0'){
+            break;
+        }
+        while(j<strlen(numero)){
+            if(num==numero[j]){
+            }
+            else if(num!=numero[j]){
+                novovet[l]=numero[j];
+                l++;
+            }
+            j++;
+        }
+        numero[j]='\0';
+        novovet[l]='\0';
+        j=0;
+        l=0;
+        while(j<strlen(novovet)){
+            if(num==novovet[j]){
+                soma++;
+            }
+            if(novovet[j]=='0'){
+                zeros++;
+            }
+            j++;
+        }
+        j=0;
+        while(j<strlen(novovet)){
+            if((novovet[j]=='0')&&verificar==0){
+                j++;
+            }
+            else{
+                verificar=1;
+                if(verificar==1){
+                outrovet[l]=novovet[j];
+                l++;
+                j++;
+                }
+            }
+        }
+        outrovet[l]='\0';
+        j=0;
+        l=0;
+        if(soma==(strlen(novovet))||(zeros==(strlen(novovet)))){
+            printf("0\n");
+        }
+        else{
+            printf("%s\n",outrovet);
+        }
+        j=0;l=0; soma=0;zeros=0;
+        numero[0]='\0';novovet[0]='\0';
+    }
+    return 0;
+}
