@@ -1,0 +1,51 @@
+#include <stdio.h>
+//professor, ficou enorme, fui adicionando um tanto de variável para fazer oq eu precisava
+int main(){
+ int par[5],numpar = 0,numimpar = 0,impar[5], valor,contador=0,qnt =0,lidospar =0, lidosimpar = 0,x=0;
+ while(contador<15){
+    scanf("%d",&valor);
+    if(valor%2 == 0){
+        par[numpar] = valor;
+        numpar++;
+        lidospar++;
+    }
+    else if(valor%2!=0){
+        impar[numimpar] = valor;
+        numimpar++;
+        lidosimpar++;
+    }
+    if(numpar == 5){
+     while(qnt <5){
+        printf("par[%d] = %d\n",qnt, par[qnt]);
+        qnt++;
+     }
+     numpar = 0;
+    }
+     else if(numimpar == 5){
+      while(qnt<5){
+        printf("impar[%d] = %d\n",qnt, impar[qnt]);
+        qnt++;
+      }
+      numimpar = 0;
+     }
+    contador++;
+    qnt = 0;
+    if(lidospar ==5){
+        lidospar = 0;
+    }
+    if(lidosimpar ==5){
+        lidosimpar = 0;
+    }
+ }
+ while(x<lidosimpar){
+    printf("impar[%d] = %d\n",x, impar[x]);
+    x++;
+    }
+    x= 0;
+ while(x<lidospar){
+    printf("par[%d] = %d\n",x, par[x]);
+    x++;
+ }
+ x=0;
+  return 0;
+}
