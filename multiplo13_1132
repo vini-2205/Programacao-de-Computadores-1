@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// fiz uma função que le dois números e subtrai os dois para verificar qual é maior, depois disso verificquei a condição de existência no qual foi dada no exercício, resto da divisão por 13.
+int soma(int n1,int n2,int soma){
+ scanf("%d",&n1);
+scanf("%d",&n2);
+  if((n1-n2)>0){
+    while(n2<=n1){
+      if(n2%13!=0){
+        soma = soma+n2;
+      }
+      n2++;
+    }
+  }
+
+  else if((n2-n1>0)){
+   while(n1<=n2){
+     if(n1%13!=0){
+        soma = soma+n1;
+     }
+     n1++;
+   }
+  }
+  // após somar os números que não são multiplos de 13, retornar para a função principal o valor da soma
+  return soma;
+}
+
+
+int main(){
+  int x, y, s;
+  s = soma(x,y,s);
+  printf("%d\n",s);
+  return 0;
+  }
