@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+    int teste, qntdi,i=0,igual=0,verificador=0;
+    char idioma[50],primeiro[50];
+    scanf("%d",&teste);
+    while(teste>0){
+        scanf("%d",&qntdi);
+        getchar();
+        while(qntdi>0){
+            verificador++;
+            gets(idioma);
+            if(i==0){
+               strcpy(primeiro,idioma);
+                i++;
+            }
+            if(i!=0){
+                if(strcmp(primeiro,idioma)==0){
+                    igual++;
+                }
+            }
+            qntdi--;
+        }
+        if(igual==verificador){
+            printf("%s\n",idioma);
+        }
+        else if(igual!=verificador){
+             printf("ingles\n");
+        }
+        teste--;
+        igual=0;
+        i=0;
+        verificador=0;
+        idioma[0]='\0';
+        primeiro[0]='\0';
+    }
+    return 0;
+}
