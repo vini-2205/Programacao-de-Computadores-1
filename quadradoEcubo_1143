@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+  int contador = 0, N,i = 0,q,c;
+  scanf("%d",&N);
+
+  while(contador<N){
+    contador++;
+    i++;
+    q = pow(i,2);
+    c = pow(i,3);
+    printf("%d %d %d\n",i,q,c);
+
+  }
+  return 0;
+
+}
