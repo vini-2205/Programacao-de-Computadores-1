@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(){
+ int contador = 0,X,Y,i=0;
+ scanf("%d %d",&X,&Y);
+ while(contador<Y){
+    contador++;
+    i++;
+    if(i % X == 0){
+        printf("%d\n", i);
+    }
+    else{
+        printf("%d ",i);
+    }
+ }
+ return 0;
+}
