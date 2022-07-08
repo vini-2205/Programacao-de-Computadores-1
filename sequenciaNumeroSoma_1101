@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main(){
+    int M, N, maior, menor, s = 0,x;
+    scanf("%d %d",&M,&N);
+    if(M>N){
+       maior = M;
+       menor = N;
+    }
+    else{
+        maior= N;
+        menor= M;
+    }
+    while((menor>0)&&(maior>0)){
+      while(menor<maior){
+      x=menor++;
+      printf("%d ",x);
+      s=s+x;
+      }
+      printf("%d ",maior);
+      s = s+maior;
+      printf("Sum=%d\n",s);
+      scanf("%d %d",&M,&N);
+      if(M>N){
+       maior = M;
+       menor = N;
+    }
+      else{
+        maior= N;
+        menor= M;
+    }
+    s = 0;
+
+}
+    return 0;
+
+    }
