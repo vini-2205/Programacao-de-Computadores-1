@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+int main(){
+  int N, M, zeros = 0,qnt=1, max=0, verificar=1;
+  //qnt serve para verifficar se existe algum zero à esquerda
+  //max serve para verificar se o número de zero está aumentando
+  //zeros serve para verificar a quantidade de zero em cada linha 
+  scanf("%d %d",&N,&M);
+  int X[N][M];
+  int i = 0, j = 0;
+  //esse wihle é para ler a matriz
+  while(i<N){
+    while(j<M){
+        scanf("%d",&X[i][j]);
+        j++;
+    }
+    i++;
+    j=0;
+  }
+  i=0;
+  j=0;
+  while(i<N){
+    while(j<M){
+        if((X[i][j]==0)&& qnt==1){
+          zeros++;
+        }
+        else{
+            qnt=0;
+        }
+        j++;
+    }
+    qnt = 1;
+    if(i!=0){
+        if((max <zeros) && (verificar==1) || ((max==zeros) && (zeros==M)) && (verificar==1)) {
+            max = zeros;
+        }
+        else{
+            verificar = 0;
+        }
+    }
+    else{
+        max = zeros;
+    }
+    i++;
+    j=0;
+    zeros = 0;
+ }
+ if(verificar == 1){
+    printf("S\n");
+ }
+ else{
+    printf("N\n");
+ }
+ return 0;
+}
