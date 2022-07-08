@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(){
+ int N[20],i=19,contador=0,valor;
+ while(i>=0){
+    scanf("%d",&valor);
+    N[i] = valor;
+    i--;
+    }
+ while(contador<20){
+    printf("N[%d] = %d\n",contador, N[contador]);
+    contador++;
+ }
+}
