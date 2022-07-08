@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+ int tamanhov,tamanhoo,tamanhoa;
+ char x[20], y[20];
+ char v[20], ordem[20], alimentacao[20];
+ int letras;
+ gets(v);
+ gets(ordem);
+ gets(alimentacao);
+ tamanhov = strlen(v);
+ tamanhoo = strlen(ordem);
+ tamanhoa = strlen(alimentacao);
+ if(tamanhov == 10){
+    letras = tamanhov+tamanhoo+tamanhoa;
+    if(letras==22){
+        printf("aguia\n");
+    }
+    if(letras==20){
+        printf("pomba\n");
+    }
+    if(letras==25){
+        printf("homem\n");
+    }
+    if(letras==27){
+        printf("vaca\n");
+    }
+ }
+ else if(tamanhov= 12){
+    if(tamanhoo==6){
+        letras = tamanhoo+tamanhoa;
+        if(letras==16){
+            printf("pulga\n");
+        }
+        if(letras==15){
+            printf("lagarta\n");
+        }
+    }
+    if(tamanhoo==8){
+        letras = tamanhoo+tamanhoa;
+        if(letras==18){
+            printf("sanguessuga\n");
+        }
+        if(letras==15){
+            printf("minhoca\n");
+        }
+ }
+ }
+ return 0;
+}
