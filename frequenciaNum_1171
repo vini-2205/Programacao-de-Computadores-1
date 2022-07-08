@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+    int qntd,j=1,vezes,fim=0,i;
+    scanf("%d",&qntd);
+    int numeros[qntd],num[2000];
+    for(i=0;i<2000;i++){
+        num[i]=j;
+        j++;
+    }
+    for(i=0;i<qntd;i++){
+        scanf("%d",&numeros[i]);
+    }
+    for(i=0;i<2000;i++){
+        for(j=0;j<qntd;j++){
+            if(num[i]==numeros[j]){
+                vezes++;
+            }
+        }
+        if(vezes>0){
+            printf("%d aparece %d vez(es)\n",num[i],vezes);
+        }
+        vezes=0;
+    }
+    return 0;
+}
