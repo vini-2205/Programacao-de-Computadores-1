@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(){
+ int n,x,y,maior,p;
+ n = p =1;
+ scanf("%d",&x);
+ maior = x;
+ while(n<100){
+  n++;
+  scanf("%d",&y);
+  if(y>maior){
+    maior = y;
+    p = n;
+  }
+  }
+  printf("%d\n%d\n",maior,p);
+  return 0;
+}
