@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(){
+ int N[1000], i = 0,T,valor,contador = 0;
+ scanf("%d",&T);
+ while(i<1000){
+    N[i]=i%T;
+    printf("N[%d] = %d\n",i,N[i]);
+    i++;
+ }
+ return 0;
+}
