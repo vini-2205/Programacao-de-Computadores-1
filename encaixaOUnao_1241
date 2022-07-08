@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+ int contador=0,casos,numa,numb,i,j=0,diferenca,certo=0,falhou=0;
+ //vamos fazer um programa que veja todos os casos e confira se encaixa ou não encaixa.
+ char A[1001];
+ char B[1001];
+ char C[1001];
+ char D[1001];
+ scanf("%d",&casos);
+ while(contador<casos){
+    scanf("%s%s",&A,&B);
+    numa = strlen(A);
+    numb = strlen(B);
+    i = numa;
+    if(numa-numb<0){
+        printf("nao encaixa\n");
+    }
+    if(numa==numb){
+        if(strcmp(A,B) == 0){
+            printf("encaixa\n");
+        }
+        else{
+            printf("nao encaixa\n");
+        }
+    }
+    if(numa-numb>0){
+        while(i>=0){
+           C[j] = A[i];
+           j++;
+           i--;
+        }
+        i=numb;
+        j=0;
+        while(i>=0){
+            D[j]=B[i];
+            j++;
+            i--;
+        }
+        i=0;
+        j=0;
+        diferenca=numb;
+        while(i<=diferenca){
+            if(C[i]!=D[i]){
+               falhou++;
+            }
+            i++;
+        }
+        if(falhou>0){
+           printf("nao encaixa\n");
+        }
+        else if(falhou==0){
+            printf("encaixa\n");
+        }
+        falhou=0;
+        }
+    contador++;
+ }
+ return 0;
+ }
