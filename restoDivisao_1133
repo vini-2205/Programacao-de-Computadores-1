@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//fiz uma função que lia os valores de X e Y e verificava e impirmia se dividisse por 5 e dava resto 2 ou 3.
+int divisores(int X,int Y){
+ scanf("%d",&X);
+ scanf("%d",&Y);
+ if(X-Y>0){
+    while(++Y<X){
+        if((Y%5==2)||(Y%5==3)){
+            printf("%d\n",Y);
+        }
+        }
+ }
+ else if(Y-X>0){
+    while(++X<Y){
+        if((X%5==2)||(X%5==3)){
+            printf("%d\n",X);
+        }
+        X++;
+    }
+ }
+
+}
+//fiz uma função principal que pedia os valores de x e y.
+int main(){
+ int x,y;
+ divisores(x,y);
+ return 0;
+
+}
