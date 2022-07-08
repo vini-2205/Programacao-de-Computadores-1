@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main(){
+    int qntd=10,i;
+    char nomes[31],nome3[31],nome7[31],nome9[31];
+    for(i=0;i<qntd;i++){
+        gets(nomes);
+        if(i==2){
+            strcpy(nome3,nomes);
+        }
+        if(i==6){
+            strcpy(nome7,nomes);
+        }
+        if(i==8){
+            strcpy(nome9,nomes);
+        }
+    }
+    printf("%s\n%s\n%s\n",nome3,nome7,nome9);
+    return 0;
+}
