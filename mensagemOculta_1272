@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+int main(){
+  int i=0,N,contador=0,j=0;
+  char casos[51],oculto[51];
+  scanf("%d",&N);
+  getchar();
+  while(contador<N){
+      gets(casos);
+      while(i<strlen(casos)){
+            if((i==0)&&(casos[i]!= ' ')){
+               oculto[j]=casos[i];
+               j++;
+            }
+            else{
+               if((casos[i]!= ' ')&&(casos[i-1]==' ')){
+                  oculto[j]=casos[i];
+                  j++;
+               }
+            }
+            i++;
+      }
+      oculto[j]='\0';
+      j=0;
+      i=0;
+      contador++;
+      printf("%s\n",oculto);
+  }
+  return 0;
+}
