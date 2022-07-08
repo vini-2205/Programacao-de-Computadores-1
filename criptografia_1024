@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+
+
+int main(){
+    int casos,i=0,j,divisao;
+    char teste[1000],novo[1000];
+    scanf("%d",&casos);
+    getchar();
+    while(casos>0){
+        gets(teste);
+        while(i<strlen(teste)){//primeira passada,somando 3 na tabela ascii
+            if((teste[i]>=97 && teste[i]<=122)||(teste[i]>=65 && teste[i]<=90)){
+                teste[i]=teste[i]+3;
+            }
+            i++;
+        }
+        teste[i]='\0';
+        i=0;
+        j=strlen(teste)-1;
+        while(j>=0){//segunda passada, invertendo as strings
+            novo[i]=teste[j];
+            i++;
+            j--;
+        }
+        novo[i]='\0';
+        i=0;
+        divisao=(strlen(novo)/2);
+        while(divisao<strlen(novo)){//terceira passada, voltando 1 na tabela ascii a partir da metade.
+            novo[divisao]=novo[divisao]-1;
+            divisao++;
+        }
+        novo[divisao]='\0';
+        printf("%s\n",novo);
+        novo[0]='\0';teste[0]='\0';
+        i=0;
+        casos--;
+    }
+    return 0;
+ }
