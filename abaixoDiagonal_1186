@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+#define a 12
+#define b 12
+
+int main(){
+    int i=0,j=0,linha=1,coluna=11,c=1;
+    float M[a][b],op,soma=0,media;
+    char m[2];
+    char s[2] = "S";
+    scanf("%s",&m[0]);
+    while(i<a){
+        while(j<b){
+            scanf("%f",&M[i][j]);
+            j++;
+        }
+        i++;
+        j=0;
+    }
+    while(coluna>=0){
+        while(linha<a){
+            soma = soma+M[linha][coluna];
+            linha++;
+        }
+        c++;
+        coluna--;
+        linha = c;
+    }
+    if(strcmp(s,m)==0){
+        op = soma;
+    }
+    else if(strcmp(s,m)!= 0){
+        op = (soma)/66.0;
+    }
+    printf("%.1f\n",op);
+    return 0;
+}
