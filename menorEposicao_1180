@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+ int N, valor,contador=1,menor,posicao;
+ scanf("%d",&N);
+ int X[N];
+ scanf("%d",&valor);
+ X[0] = valor;
+ menor = X[0];
+ while(contador<N){
+    scanf("%d",&valor);
+    X[contador] = valor;
+    if(menor>X[contador]){
+        menor = X[contador];
+        posicao = contador;
+    }
+    contador++;
+    }
+    printf("Menor valor: %d\n",menor);
+    printf("Posicao: %d\n",posicao);
+    return 0;
+}
