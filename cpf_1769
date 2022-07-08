@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+    char cpf[15];
+    int num[12];
+    int i=0,j=0,soma,m1=0,m2=0,a=9,valido=0,penultimo,ultimo,ok=1;
+    while(gets(cpf)){
+        for(i=0;i<14;i++){
+            if(i==3||i==7||i==11){
+            }
+            else{
+                num[j]=cpf[i]-48;
+                j++;
+            }
+        }
+        j=1;
+        for(i=0;i<9;i++){
+            m1=m1+(num[i]*j);
+            m2=m2+(num[i]*a);
+            j++;
+            a--;
+        }
+        if(m1%11==10){
+            penultimo=0;
+        }
+        else{
+            penultimo=(m1%11);
+        }
+        if(m2%11==10){
+            ultimo=0;
+        }
+        else{
+            ultimo=(m2%11);
+        }
+        if(penultimo==num[9] && ultimo==num[10]){
+            valido++;
+        }
+        if(valido==1){
+            printf("CPF valido\n");
+        }
+        else{
+            printf("CPF invalido\n");
+        }
+        valido=0,j=0,a=9,m1=0,m2=0,valido=0;
+    }
+    return 0;
+}
